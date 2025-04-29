@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<AppInstaller
+    Uri="https://gqmlab-solutions.github.io/msix-updates/GQMLabManager.appinstaller"
+    Version="1.0.0.0" 
+    xmlns="http://schemas.microsoft.com/appx/appinstaller/2017/2">
+    
+    <MainBundle
+        Name="com.yourorg.gqmLabManager"
+        Version="1.0.0.0"
+        Publisher="CN=GQM Lab Manager, O=YourOrganization"
+        Uri="https://gqmlab-solutions.github.io/msix-updates/GQMLabManager_1.0.0.0_x64.msix" />
+        
+    <UpdateSettings>
+        <OnLaunch HoursBetweenUpdateChecks="0" />
+        <AutomaticBackgroundTask />
+    </UpdateSettings>
+    
+</AppInstaller>
