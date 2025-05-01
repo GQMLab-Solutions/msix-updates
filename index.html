@@ -19,6 +19,13 @@
       margin-bottom: 0.5em;
     }
     
+    h2 {
+      color: #0078d7;
+      border-bottom: 2px solid #e0e0e0;
+      padding-bottom: 10px;
+      margin-top: 30px;
+    }
+    
     .container {
       background-color: #f9f9f9;
       border-radius: 8px;
@@ -56,28 +63,130 @@
       margin: 15px 0;
     }
     
+    .success {
+      background-color: #e7f5e9;
+      border-left: 4px solid #4caf50;
+      padding: 12px;
+      margin: 15px 0;
+    }
+    
     .instruction-step {
       background-color: #f0f7ff;
-      padding: 12px;
-      margin: 10px 0;
-      border-radius: 4px;
+      padding: 20px;
+      margin: 15px 0;
+      border-radius: 8px;
+      border: 1px solid #d0e5ff;
+    }
+    
+    .instruction-step h3 {
+      margin-top: 0;
+      color: #0078d7;
+      display: flex;
+      align-items: center;
+    }
+    
+    .instruction-step h3::before {
+      content: "";
+      display: inline-block;
+      width: 24px;
+      height: 24px;
+      background-color: #0078d7;
+      border-radius: 50%;
+      margin-right: 10px;
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='16' height='16' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: 16px;
     }
     
     .instruction-number {
-      display: inline-block;
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
       background-color: #0078d7;
       color: white;
       width: 24px;
       height: 24px;
       text-align: center;
       border-radius: 50%;
-      margin-right: 8px;
+      margin-right: 10px;
+      font-weight: bold;
+    }
+    
+    .steps {
+      margin-left: 10px;
+    }
+    
+    .steps li {
+      margin-bottom: 12px;
+      position: relative;
     }
     
     footer {
       margin-top: 40px;
       font-size: 0.9em;
       color: #666;
+      text-align: center;
+      border-top: 1px solid #eee;
+      padding-top: 20px;
+    }
+    
+    .recommendation-badge {
+      display: inline-block;
+      background-color: #4caf50;
+      color: white;
+      font-size: 0.8em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+      vertical-align: middle;
+    }
+    
+    .screenshot {
+      border: 1px solid #ddd;
+      border-radius: 4px;
+      padding: 5px;
+      max-width: 100%;
+      margin: 10px 0;
+    }
+    
+    .screenshot-container {
+      text-align: center;
+      margin: 20px 0;
+    }
+    
+    .screenshot-caption {
+      font-size: 0.9em;
+      color: #666;
+      margin-top: 5px;
+    }
+    
+    .tab-container {
+      display: flex;
+      border-bottom: 1px solid #ddd;
+      margin-bottom: 20px;
+    }
+    
+    .tab {
+      padding: 10px 20px;
+      cursor: pointer;
+      background-color: #f1f1f1;
+      border: 1px solid #ddd;
+      border-bottom: none;
+      border-radius: 5px 5px 0 0;
+      margin-right: 5px;
+    }
+    
+    .tab.active {
+      background-color: white;
+      border-bottom: 1px solid white;
+      margin-bottom: -1px;
+      font-weight: bold;
+    }
+    
+    .checkmark {
+      color: #4caf50;
+      font-weight: bold;
     }
   </style>
 </head>
@@ -86,76 +195,110 @@
   <p>Version 1.0.0.0 - Lab Management System for Quality Control</p>
   
   <div class="container">
-    <h2>Installation Options</h2>
+    <h2>Choose Your Installation Method</h2>
+    <p>Please select the installation method that works best for you:</p>
     
-    <!-- Replace the Option 1 section with this -->
-<div class="instruction-step">
-  <h3>Option 1: Easy Install</h3>
-  <p>Download our installer package:</p>
-  <a href="InstallGQMLabManager.bat" class="download-button" download>
-    Download Installer
-  </a>
-  <div class="alert">
-    <p><strong>Important Note:</strong></p>
-    <p>Some users may encounter issues with the automatic installer due to system security settings or path configurations. If the installer doesn't work for you, please use the Manual Installation (Option 2) below, which works reliably on all systems.</p>
+    <div class="instruction-step">
+      <h3>Option 1: Complete Package <span class="recommendation-badge">RECOMMENDED</span></h3>
+      <p>Download our all-in-one package that contains everything you need:</p>
+      
+      <a href="GQMLabManagerFiles.zip" class="download-button" download>
+        Download Complete Package
+      </a>
+      
+      <div class="success">
+        <p><strong>Why choose this option?</strong></p>
+        <p>✓ All required files in one download<br>
+        ✓ Works reliably on all systems<br>
+        ✓ No internet connection needed during installation<br>
+        ✓ Simplest installation process</p>
+      </div>
+      
+      <h4>Installation Instructions:</h4>
+      <ol class="steps">
+        <li><strong>Download</strong> the ZIP file using the button above</li>
+        <li><strong>Extract all files</strong> to a folder on your computer
+          <div class="screenshot-container">
+            <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23f5f5f5'/%3E%3Ctext x='200' y='125' font-family='Arial' font-size='16' text-anchor='middle'%3EExtract files by right-clicking the ZIP and selecting "Extract All"...%3C/text%3E%3C/svg%3E" alt="Extract files screenshot" class="screenshot">
+            <div class="screenshot-caption">Right-click the ZIP file and select "Extract All..."</div>
+          </div>
+        </li>
+        <li><strong>Install the certificate</strong>:
+          <ul>
+            <li>Double-click on the GQMLab_Simple.cer file</li>
+            <li>Click "Install Certificate"</li>
+            <li>Select "Local Machine" and click "Next"</li>
+            <li>Select "Place all certificates in the following store"</li>
+            <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
+            <li>Click "OK" → "Next" → "Finish"</li>
+          </ul>
+        </li>
+        <li><strong>Install the application</strong>:
+          <ul>
+            <li>Double-click the gqm_lab_manager.msix file</li>
+            <li>The application will install automatically</li>
+          </ul>
+        </li>
+        <li><strong>Start using GQM Lab Manager</strong> - See the "Launching the Application" section below</li>
+      </ol>
+    </div>
+    
+    <div class="instruction-step">
+      <h3>Option 2: Installation Wizard</h3>
+      <p>Download our automated installation wizard:</p>
+      
+      <a href="InstallGQMLabManager.bat" class="download-button" download>
+        Download Installation Wizard
+      </a>
+      
+      <div class="alert">
+        <p><strong>Important Note:</strong></p>
+        <p>This wizard requires administrator privileges and an active internet connection. Some security software may block parts of the installation process.</p>
+      </div>
+      
+      <h4>Installation Instructions:</h4>
+      <ol class="steps">
+        <li><strong>Download</strong> the installation wizard using the button above</li>
+        <li><strong>Right-click</strong> on InstallGQMLabManager.bat and select "Run as administrator"</li>
+        <li><strong>Follow the on-screen instructions</strong> to complete the installation</li>
+        <li><strong>Start using GQM Lab Manager</strong> - The wizard will create a desktop shortcut for you</li>
+      </ol>
+    </div>
+    
+    <div class="instruction-step">
+      <h3>Option 3: Manual Installation</h3>
+      <p>If you prefer to download and install files individually:</p>
+      
+      <h4>Step 1: Download these files</h4>
+      <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
+      <a href="gqm_lab_manager.msix" class="direct-link" download>Download MSIX Package</a>
+      
+      <h4>Step 2: Install the certificate</h4>
+      <ol class="steps">
+        <li>Double-click the downloaded certificate file</li>
+        <li>Click "Install Certificate"</li>
+        <li>Select "Local Machine" and click "Next"</li>
+        <li>Select "Place all certificates in the following store"</li>
+        <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
+        <li>Click "OK" → "Next" → "Finish"</li>
+      </ol>
+      
+      <h4>Step 3: Install the application</h4>
+      <ol class="steps">
+        <li>Double-click the downloaded MSIX file</li>
+        <li>The application should install automatically</li>
+      </ol>
+    </div>
   </div>
-</div>
-
-<!-- Add this new option -->
-<div class="instruction-step">
-  <h3>Option 2: All-in-One Package (Recommended)</h3>
-  <p>Download our complete package that contains all required files:</p>
-  <a href="GQMLabManagerFiles.zip" class="download-button" download>
-    Download Complete Package
-  </a>
-  <div class="alert">
-    <p><strong>Instructions:</strong></p>
-    <ol>
-      <li>Download the ZIP file</li>
-      <li>Extract all files to a folder</li>
-      <li>Right-click on the GQMLab_Simple.cer file and select "Install Certificate"</li>
-      <li>Select "Local Machine" and click "Next"</li>
-      <li>Select "Place all certificates in the following store"</li>
-      <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
-      <li>Click "OK" → "Next" → "Finish"</li>
-      <li>Double-click the gqm_lab_manager.msix file to install the application</li>
-    </ol>
-  </div>
-</div>
-
-<!-- Update the manual installation to be Option 3 instead of Option 2 -->
-<div class="instruction-step">
-  <h3>Option 3: Individual Files</h3>
-  <p>If you prefer to download files individually:</p>
-  
-  <p><span class="instruction-number">1</span> Download the certificate and the MSIX package:</p>
-  <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
-  <a href="gqm_lab_manager.msix" class="direct-link" download>Download MSIX Package</a>
-  
-  <p><span class="instruction-number">2</span> Install the certificate:</p>
-  <ul>
-    <li>Double-click the downloaded certificate file</li>
-    <li>Click "Install Certificate"</li>
-    <li>Select "Local Machine" and click "Next"</li>
-    <li>Select "Place all certificates in the following store"</li>
-    <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
-    <li>Click "OK" → "Next" → "Finish"</li>
-  </ul>
-  
-  <p><span class="instruction-number">3</span> Install the application:</p>
-  <ul>
-    <li>Double-click the downloaded MSIX file</li>
-    <li>Follow the installation prompts</li>
-  </ul>
-</div>
   
   <div class="container">
     <h2>System Requirements</h2>
     <ul>
-      <li>Windows 11 </li>
-      <li>64-bit processor</li>
-      <li>4 GB RAM minimum</li>
-      <li>100 MB available storage</li>
+      <li><strong>Operating System:</strong> Windows 10 (version 1809 or later) or Windows 11</li>
+      <li><strong>Processor:</strong> 64-bit processor</li>
+      <li><strong>Memory:</strong> 4 GB RAM minimum</li>
+      <li><strong>Storage:</strong> 100 MB available storage</li>
+      <li><strong>Permissions:</strong> Administrator rights during installation</li>
     </ul>
   </div>
 
@@ -165,25 +308,32 @@
     
     <div class="instruction-step">
       <h3>From the Start Menu</h3>
-      <ol>
-        <li>Click the Windows Start button in the bottom left corner</li>
+      <ol class="steps">
+        <li>Click the Windows Start button <span class="checkmark">⊞</span> in the bottom left corner</li>
         <li>Scroll through the app list or type "GQM Lab Manager" in the search box</li>
         <li>Click on the GQM Lab Manager app icon</li>
       </ol>
+      <div class="screenshot-container">
+        <img src="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='400' height='250' viewBox='0 0 400 250'%3E%3Crect width='400' height='250' fill='%23f5f5f5'/%3E%3Ctext x='200' y='125' font-family='Arial' font-size='16' text-anchor='middle'%3EWindows Start Menu showing GQM Lab Manager%3C/text%3E%3C/svg%3E" alt="Start menu screenshot" class="screenshot">
+        <div class="screenshot-caption">GQM Lab Manager in Windows Start Menu</div>
+      </div>
     </div>
     
     <div class="instruction-step">
       <h3>Using Windows Search</h3>
-      <ol>
-        <li>Press the Windows key on your keyboard</li>
+      <ol class="steps">
+        <li>Press the Windows key <span class="checkmark">⊞</span> on your keyboard</li>
         <li>Type "GQM Lab Manager"</li>
         <li>Click on the app when it appears in search results</li>
       </ol>
     </div>
     
     <div class="instruction-step">
-      <h3>Create a Desktop Shortcut (Optional)</h3>
-      <ol>
+      <h3>From Desktop Shortcut</h3>
+      <p>If you used the Installation Wizard (Option 2), a desktop shortcut was automatically created for you. Simply double-click this shortcut to launch GQM Lab Manager.</p>
+      
+      <p>If you'd like to create a desktop shortcut manually:</p>
+      <ol class="steps">
         <li>Find GQM Lab Manager in the Start menu</li>
         <li>Right-click on the app and select "More" → "Open file location"</li>
         <li>Right-click the shortcut in the opened folder</li>
@@ -192,12 +342,34 @@
       </ol>
     </div>
   </div>
-  
- 
+
+  <div class="container">
+    <h2>Need Help?</h2>
+    <p>If you're experiencing installation issues or have questions about GQM Lab Manager:</p>
+    
+    <div class="instruction-step">
+      <h3>Common Installation Issues</h3>
+      
+      <p><strong>Certificate Trust Error</strong></p>
+      <p>If you see a message about untrusted certificates, make sure you've installed the certificate to the "Trusted Root Certification Authorities" store for "Local Machine" (not "Current User").</p>
+      
+      <p><strong>Cannot Find Application After Installation</strong></p>
+      <p>If you can't find GQM Lab Manager after installation, try searching in the Start menu or check if Windows is still finishing the installation in the background.</p>
+      
+      <p><strong>Security Software Blocking Installation</strong></p>
+      <p>Some security software may block the installation. Try temporarily disabling your antivirus or adding an exception for GQM Lab Manager.</p>
+    </div>
+    
+    <div class="instruction-step">
+      <h3>Contact Support</h3>
+      <p>If you continue to experience issues, please contact our support team:</p>
+      <p>Email: <a href="mailto:support@geoquipmarine.com">support@geoquipmarine.com</a></p>
+      <p>Please include details about your operating system and any error messages you encounter.</p>
+    </div>
+  </div>
   
   <footer>
     <p>© 2025 Geoquip Marine. All rights reserved.</p>
-    
   </footer>
 </body>
 </html>
