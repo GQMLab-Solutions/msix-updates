@@ -88,55 +88,66 @@
   <div class="container">
     <h2>Installation Options</h2>
     
-    <div class="instruction-step">
-      <h3>Option 1: Easy Install (Recommended)</h3>
-      <p>Download our installer package that handles everything for you:</p>
-      <a href="InstallGQMLabManager.bat" class="download-button" download>
-        Download Installer
-      </a>
-      <div class="alert">
-        <p><strong>Instructions:</strong></p>
-        <ol>
-          <li>Download the installer</li>
-          <li>Right-click the downloaded file and select "Run as administrator"</li>
-          <li>Follow the on-screen prompts</li>
-        </ol>
-      </div>
-    </div>
-
-    
-    <div class="instruction-step">
-      <h3>Option 2: Manual Installation</h3>
-      <p>If you prefer to install manually, follow these steps:</p>
-      
-      <p><span class="instruction-number">1</span> Download the certificate and the MSIX package:</p>
-      <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
-      <a href="gqm_lab_manager.msix" class="direct-link" download>Download MSIX Package</a>
-      
-      <p><span class="instruction-number">2</span> Install the certificate:</p>
-      <ul>
-        <li>Double-click the downloaded certificate file</li>
-        <li>Click "Install Certificate"</li>
-        <li>Select "Local Machine" and click "Next"</li>
-        <li>Select "Place all certificates in the following store"</li>
-        <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
-        <li>Click "OK" → "Next" → "Finish"</li>
-      </ul>
-      
-      <p><span class="instruction-number">3</span> Install the application:</p>
-      <ul>
-        <li>Double-click the downloaded MSIX file</li>
-        <li>Follow the installation prompts</li>
-      </ul>
-    </div>
-    
-    <div class="instruction-step">
-      <h3>Option 3: Automatic Updates</h3>
-      <p>Use the AppInstaller file to enable automatic updates (requires certificate installation first):</p>
-      <a href="GQMLabManager.appinstaller" class="direct-link">Download AppInstaller File</a>
-      <p>This option will keep your application up-to-date automatically.</p>
-    </div>
+    <!-- Replace the Option 1 section with this -->
+<div class="instruction-step">
+  <h3>Option 1: Easy Install</h3>
+  <p>Download our installer package:</p>
+  <a href="InstallGQMLabManager.bat" class="download-button" download>
+    Download Installer
+  </a>
+  <div class="alert">
+    <p><strong>Important Note:</strong></p>
+    <p>Some users may encounter issues with the automatic installer due to system security settings or path configurations. If the installer doesn't work for you, please use the Manual Installation (Option 2) below, which works reliably on all systems.</p>
   </div>
+</div>
+
+<!-- Add this new option -->
+<div class="instruction-step">
+  <h3>Option 2: All-in-One Package (Recommended)</h3>
+  <p>Download our complete package that contains all required files:</p>
+  <a href="GQMLabManagerFiles.zip" class="download-button" download>
+    Download Complete Package
+  </a>
+  <div class="alert">
+    <p><strong>Instructions:</strong></p>
+    <ol>
+      <li>Download the ZIP file</li>
+      <li>Extract all files to a folder</li>
+      <li>Right-click on the GQMLab_Simple.cer file and select "Install Certificate"</li>
+      <li>Select "Local Machine" and click "Next"</li>
+      <li>Select "Place all certificates in the following store"</li>
+      <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
+      <li>Click "OK" → "Next" → "Finish"</li>
+      <li>Double-click the gqm_lab_manager.msix file to install the application</li>
+    </ol>
+  </div>
+</div>
+
+<!-- Update the manual installation to be Option 3 instead of Option 2 -->
+<div class="instruction-step">
+  <h3>Option 3: Individual Files</h3>
+  <p>If you prefer to download files individually:</p>
+  
+  <p><span class="instruction-number">1</span> Download the certificate and the MSIX package:</p>
+  <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
+  <a href="gqm_lab_manager.msix" class="direct-link" download>Download MSIX Package</a>
+  
+  <p><span class="instruction-number">2</span> Install the certificate:</p>
+  <ul>
+    <li>Double-click the downloaded certificate file</li>
+    <li>Click "Install Certificate"</li>
+    <li>Select "Local Machine" and click "Next"</li>
+    <li>Select "Place all certificates in the following store"</li>
+    <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
+    <li>Click "OK" → "Next" → "Finish"</li>
+  </ul>
+  
+  <p><span class="instruction-number">3</span> Install the application:</p>
+  <ul>
+    <li>Double-click the downloaded MSIX file</li>
+    <li>Follow the installation prompts</li>
+  </ul>
+</div>
   
   <div class="container">
     <h2>System Requirements</h2>
