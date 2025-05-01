@@ -160,6 +160,39 @@
       margin-top: 0;
       margin-bottom: 10px;
     }
+    
+    .options-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+    }
+    
+    .option-box {
+      flex: 1;
+      min-width: 300px;
+      background-color: #f0f7ff;
+      border: 1px solid #d0e5ff;
+      border-radius: 8px;
+      padding: 20px;
+    }
+    
+    .option-box h3 {
+      margin-top: 0;
+      color: #0078d7;
+      display: flex;
+      align-items: center;
+    }
+    
+    .option-badge {
+      background-color: #0078d7;
+      color: white;
+      font-size: 0.8em;
+      padding: 3px 8px;
+      border-radius: 4px;
+      margin-left: 10px;
+      font-weight: normal;
+    }
   </style>
 </head>
 <body>
@@ -167,52 +200,58 @@
   <p>Version 1.0.0.0 - Lab Management System for Quality Control</p>
   
   <div class="container">
-    <h2>Easy Installation Instructions</h2>
+    <h2>Choose How to Install</h2>
+    <p>Select the installation method that works best for you:</p>
     
-    <p>Follow these simple steps to install GQM Lab Manager on your computer:</p>
-    
-    <ul class="simple-steps">
-      <li>
-        <div class="step-number">1</div>
-        <div class="step-content">
-          <h4>Download These Two Files</h4>
-          <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
-          <a href="gqm_lab_manager.msix" class="direct-link" download>Download Application</a>
+    <div class="options-container">
+      <div class="option-box">
+        <h3>Option 1: Automatic Installation <span class="option-badge">EASIEST</span></h3>
+        <p>Our installation script handles everything for you automatically.</p>
+        <a href="InstallGQMLabManager.bat" class="download-button" download>
+          Download Installer
+        </a>
+        
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Download the installer using the button above</li>
+          <li>Right-click the downloaded file and select "Run as administrator"</li>
+          <li>Follow the on-screen prompts</li>
+          <li>When installation is complete, you'll find GQM Lab Manager in your Start menu</li>
+        </ol>
+        
+        <div class="alert">
+          <p><strong>Note:</strong> This installer requires administrator privileges and an active internet connection.</p>
         </div>
-      </li>
+      </div>
       
-      <li>
-        <div class="step-number">2</div>
-        <div class="step-content">
-          <h4>Install the Certificate</h4>
-          <ol>
-            <li>Double-click the downloaded <strong>GQMLab_Simple.cer</strong> file</li>
-            <li>Click "Install Certificate"</li>
-            <li>Select "Local Machine" and click "Next"</li>
-            <li>Select "Place all certificates in the following store"</li>
-            <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
-            <li>Click "OK" → "Next" → "Finish"</li>
-          </ol>
-          <div class="alert">
-            <strong>Important:</strong> You must select "Local Machine" (not "Current User") and place the certificate in the "Trusted Root Certification Authorities" store.
-          </div>
-        </div>
-      </li>
-      
-      <li>
-        <div class="step-number">3</div>
-        <div class="step-content">
-          <h4>Install the Application</h4>
-          <ol>
-            <li>Double-click the downloaded <strong>gqm_lab_manager.msix</strong> file</li>
-            <li>The application will install automatically</li>
-          </ol>
-          <div class="success">
-            <strong>That's it!</strong> GQM Lab Manager is now installed on your computer.
-          </div>
-        </div>
-      </li>
-    </ul>
+      <div class="option-box">
+        <h3>Option 2: Manual Installation</h3>
+        <p>Install by downloading and installing the files individually.</p>
+        <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
+        <a href="gqm_lab_manager.msix" class="direct-link" download>Download Application</a>
+        
+        <h4>Instructions:</h4>
+        <ol>
+          <li>Download both files using the links above</li>
+          <li>Install the certificate:
+            <ul>
+              <li>Double-click the GQMLab_Simple.cer file</li>
+              <li>Click "Install Certificate"</li>
+              <li>Select "Local Machine" and click "Next"</li>
+              <li>Select "Place all certificates in the following store"</li>
+              <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
+              <li>Click "OK" → "Next" → "Finish"</li>
+            </ul>
+          </li>
+          <li>Install the application:
+            <ul>
+              <li>Double-click the gqm_lab_manager.msix file</li>
+              <li>The application will install automatically</li>
+            </ul>
+          </li>
+        </ol>
+      </div>
+    </div>
   </div>
 
   <div class="container">
