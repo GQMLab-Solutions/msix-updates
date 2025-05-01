@@ -14,7 +14,16 @@ if %errorLevel% neq 0 (
 )
 
 echo Installing certificate...
-certutil -addstore Root GQMLab_Simple.cer
+:: Check if certificate exists locally first
+if exist "GQMLab_Simple.cer" (
+    certutil -addstore Root "GQMLab_Simple.cer"
+) else (
+    :: Try to download it
+    echo Local certificate not found, downloading...
+    powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://gqmlab-solutions.github.io/msix-updates/GQMLab_Simple.cer', '%TEMP%\GQMLab_Simple.cer')"
+    certutil -addstore Root "%TEMP%\GQMLab_Simple.cer"
+)
+
 if %errorLevel% neq 0 (
     echo Certificate installation failed.
     pause
@@ -24,7 +33,16 @@ echo Certificate installed successfully.
 echo.
 
 echo Installing GQM Lab Manager...
-powershell -Command "Add-AppxPackage -Path 'gqm_lab_manager.msix'"
+:: Check if MSIX exists locally
+if exist "gqm_lab_manager.msix" (
+    powershell -Command "Add-AppxPackage -Path 'gqm_lab_manager.msix'"
+) else (
+    :: Try to download it
+    echo Local MSIX not found, downloading...
+    powershell -Command "(New-Object System.Net.WebClient).DownloadFile('https://gqmlab-solutions.github.io/msix-updates/gqm_lab_manager.msix', '%TEMP%\gqm_lab_manager.msix')"
+    powershell -Command "Add-AppxPackage -Path '%TEMP%\gqm_lab_manager.msix'"
+)
+
 if %errorLevel% neq 0 (
     echo Installation failed.
     pause
