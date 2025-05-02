@@ -2,7 +2,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
     xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
-    Version="1.0.0.2"
+    Version="1.0.0.0"
     Uri="https://gqmlab-solutions.github.io/msix-updates/GQMLabManager.appinstaller">
 
     <MainPackage
