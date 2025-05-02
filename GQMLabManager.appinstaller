@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
     xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
-    Version="1.0.0.3"
+    Version="1.0.0.4"
     Uri="https://gqmlab-solutions.github.io/msix-updates/GQMLabManager.appinstaller">
     
     <MainBundle
         Name="com.yourorg.gqmLabManager"
-        Version="1.0.0.3"
+        Version="1.0.0.4"
         Publisher="CN=GQM Lab Manager, O=YourOrganization"
         Uri="https://gqmlab-solutions.github.io/msix-updates/gqm_lab_manager.msix" />
         
