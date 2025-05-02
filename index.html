@@ -197,7 +197,7 @@
 </head>
 <body>
   <h1>GQM Lab Manager</h1>
-  <p>Version 1.0.0.0 - Lab Management System for Quality Control</p>
+  <p>Version 1.0.0.2 - Lab Management System for Quality Control</p>
   
   <div class="container">
     <h2>Choose How to Install</h2>
@@ -205,30 +205,33 @@
     
     <div class="options-container">
       <div class="option-box">
-        <h3>Option 1: Automatic Installation <span class="option-badge">EASIEST</span></h3>
-        <p>Our installation script handles everything for you automatically.</p>
-        <a href="InstallGQMLabManager.bat" class="download-button" download>
-          Download Installer
+        <h3>Option 1: One-Click Installation <span class="option-badge">RECOMMENDED</span></h3>
+        <p>Install with automatic updates whenever new versions are released.</p>
+        <a href="GQMLabManager.appinstaller" class="download-button">
+          Install with Auto-Updates
         </a>
         
         <h4>Instructions:</h4>
         <ol>
-          <li>Download the installer using the button above</li>
-          <li>Right-click the downloaded file and select "Run as administrator"</li>
-          <li>Follow the on-screen prompts</li>
-          <li>When installation is complete, you'll find GQM Lab Manager in your Start menu</li>
+          <li>Click the button above</li>
+          <li>If prompted by your browser, click "Open" or "Allow"</li>
+          <li>If prompted about an unknown publisher, click "Install" or "Yes"</li>
+          <li>GQM Lab Manager will install automatically</li>
         </ol>
         
-        <div class="alert">
-          <p><strong>Note:</strong> This installer requires administrator privileges and an active internet connection.</p>
+        <div class="success">
+          <p><strong>Benefits:</strong></p>
+          <p>✓ Updates install automatically when available<br>
+          ✓ No need to reinstall when new versions are released<br>
+          ✓ Always have the latest features and fixes</p>
         </div>
       </div>
       
       <div class="option-box">
         <h3>Option 2: Manual Installation</h3>
-        <p>Install by downloading and installing the files individually.</p>
-        <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
-        <a href="gqm_lab_manager.msix" class="direct-link" download>Download Application</a>
+        <p>Install step-by-step using individual files.</p>
+        <a href="GQMLab_Simple.cer" class="direct-link" download>1. Download Certificate</a>
+        <a href="gqm_lab_manager.msix" class="direct-link" download>2. Download Application</a>
         
         <h4>Instructions:</h4>
         <ol>
@@ -245,11 +248,22 @@
           </li>
           <li>Install the application:
             <ul>
-              <li>Double-click the gqm_lab_manager.msix file</li>
+              <li>Double-click the downloaded MSIX file</li>
               <li>The application will install automatically</li>
             </ul>
           </li>
+          <li>For automatic updates: 
+            <ul>
+              <li>After completing steps 1-3, return to this page and click the button below</li>
+              <li>This configures your installation to receive automatic updates</li>
+            </ul>
+            <a href="GQMLabManager.appinstaller" class="direct-link">Enable Automatic Updates</a>
+          </li>
         </ol>
+        
+        <div class="alert">
+          <p><strong>Note:</strong> If you skip step 4, you'll need to manually reinstall when new versions are released.</p>
+        </div>
       </div>
     </div>
   </div>
@@ -305,7 +319,6 @@
       <p><strong>Common Issue:</strong> If you see an error about an untrusted certificate, make sure you've installed the certificate to the "Trusted Root Certification Authorities" store for "Local Machine" (not "Current User").</p>
     </div>
     
-    <p>For further assistance, please contact the developer <a href="mailto:david.coldeira@geoquip-marine.com">support@geoquipmarine.com</a></p>
   </div>
   
   <footer>
