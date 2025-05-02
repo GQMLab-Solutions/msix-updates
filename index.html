@@ -197,73 +197,52 @@
 </head>
 <body>
   <h1>GQM Lab Manager</h1>
-  <p>Version 1.0.0.2 - Lab Management System for Quality Control</p>
+  <p>Version 1.0.0.0 - Lab Management System for Quality Control</p>
   
   <div class="container">
-    <h2>Choose How to Install</h2>
-    <p>Select the installation method that works best for you:</p>
+    <h2>Installation</h2>
     
-    <div class="options-container">
-      <div class="option-box">
-        <h3>Option 1: One-Click Installation <span class="option-badge">RECOMMENDED</span></h3>
-        <p>Install with automatic updates whenever new versions are released.</p>
-        <a href="GQMLabManager.appinstaller" class="download-button">
-          Install with Auto-Updates
-        </a>
-        
-        <h4>Instructions:</h4>
+    <div class="option-box">
+      <h3>Installation Instructions</h3>
+      <p>Follow these steps to install GQM Lab Manager:</p>
+      
+      <div class="step-number">1</div>
+      <div class="step-content">
+        <h4>Download These Files</h4>
+        <a href="GQMLab_Simple.cer" class="direct-link" download>Download Certificate</a>
+        <a href="gqm_lab_manager.msix" class="direct-link" download>Download Application</a>
+      </div>
+      
+      <div class="step-number">2</div>
+      <div class="step-content">
+        <h4>Install the Certificate</h4>
         <ol>
-          <li>Click the button above</li>
-          <li>If prompted by your browser, click "Open" or "Allow"</li>
-          <li>If prompted about an unknown publisher, click "Install" or "Yes"</li>
-          <li>GQM Lab Manager will install automatically</li>
+          <li>Double-click the downloaded <strong>GQMLab_Simple.cer</strong> file</li>
+          <li>Click "Install Certificate"</li>
+          <li>Select "Local Machine" and click "Next"</li>
+          <li>Select "Place all certificates in the following store"</li>
+          <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
+          <li>Click "OK" → "Next" → "Finish"</li>
         </ol>
-        
-        <div class="success">
-          <p><strong>Benefits:</strong></p>
-          <p>✓ Updates install automatically when available<br>
-          ✓ No need to reinstall when new versions are released<br>
-          ✓ Always have the latest features and fixes</p>
+        <div class="alert">
+          <p><strong>Important:</strong> You must select "Local Machine" (not "Current User") and place the certificate in the "Trusted Root Certification Authorities" store.</p>
         </div>
       </div>
       
-      <div class="option-box">
-        <h3>Option 2: Manual Installation</h3>
-        <p>Install step-by-step using individual files.</p>
-        <a href="GQMLab_Simple.cer" class="direct-link" download>1. Download Certificate</a>
-        <a href="gqm_lab_manager.msix" class="direct-link" download>2. Download Application</a>
-        
-        <h4>Instructions:</h4>
+      <div class="step-number">3</div>
+      <div class="step-content">
+        <h4>Install the Application</h4>
         <ol>
-          <li>Download both files using the links above</li>
-          <li>Install the certificate:
-            <ul>
-              <li>Double-click the GQMLab_Simple.cer file</li>
-              <li>Click "Install Certificate"</li>
-              <li>Select "Local Machine" and click "Next"</li>
-              <li>Select "Place all certificates in the following store"</li>
-              <li>Click "Browse" and select "Trusted Root Certification Authorities"</li>
-              <li>Click "OK" → "Next" → "Finish"</li>
-            </ul>
-          </li>
-          <li>Install the application:
-            <ul>
-              <li>Double-click the downloaded MSIX file</li>
-              <li>The application will install automatically</li>
-            </ul>
-          </li>
-          <li>For automatic updates: 
-            <ul>
-              <li>After completing steps 1-3, return to this page and click the button below</li>
-              <li>This configures your installation to receive automatic updates</li>
-            </ul>
-            <a href="GQMLabManager.appinstaller" class="direct-link">Enable Automatic Updates</a>
-          </li>
+          <li>Double-click the downloaded <strong>gqm_lab_manager.msix</strong> file</li>
+          <li>The application will install automatically</li>
         </ol>
-        
-        <div class="alert">
-          <p><strong>Note:</strong> If you skip step 4, you'll need to manually reinstall when new versions are released.</p>
+        <div class="success">
+          <p><strong>That's it!</strong> GQM Lab Manager is now installed on your computer.</p>
         </div>
+      </div>
+      
+      <div class="alert">
+        <p><strong>Note:</strong> We're working on automatic updates. For now, please check back regularly for new versions.</p>
       </div>
     </div>
   </div>

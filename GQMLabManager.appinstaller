@@ -1,20 +1,17 @@
-
 <?xml version="1.0" encoding="utf-8"?>
 <AppInstaller
     xmlns="http://schemas.microsoft.com/appx/appinstaller/2018"
     Version="1.0.0.0"
     Uri="https://gqmlab-solutions.github.io/msix-updates/GQMLabManager.appinstaller">
-
-    <MainPackage
-        Name="com.yourorg.gqmLabManager"
-        Version="1.0.0.2"
-        Publisher="CN=GQM Lab Manager, O=YourOrganization"
-        Uri="https://gqmlab-solutions.github.io/msix-updates/gqm_lab_manager.msix"
-        ProcessorArchitecture="x64" />
     
+    <MainBundle
+        Name="GQMLabManager"
+        Version="1.0.0.0"
+        Publisher="CN=GQM Lab Manager, O=Geoquip Marine"
+        Uri="https://gqmlab-solutions.github.io/msix-updates/gqm_lab_manager.msix" />
+        
     <UpdateSettings>
         <OnLaunch HoursBetweenUpdateChecks="0" />
         <AutomaticBackgroundTask />
     </UpdateSettings>
-
 </AppInstaller>
