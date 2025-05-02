@@ -5,13 +5,14 @@
     Uri="https://gqmlab-solutions.github.io/msix-updates/GQMLabManager.appinstaller">
     
     <MainBundle
-        Name="GQMLabManager"
+        Name="com.yourorg.gqmLabManager"
         Version="1.0.0.3"
-        Publisher="CN=GQM Lab Manager, O=Geoquip Marine"
+        Publisher="CN=GQM Lab Manager, O=YourOrganization"
         Uri="https://gqmlab-solutions.github.io/msix-updates/gqm_lab_manager.msix" />
         
     <UpdateSettings>
-        <OnLaunch HoursBetweenUpdateChecks="0" />
+        <OnLaunch HoursBetweenUpdateChecks="0" ShowPrompt="true" />
         <AutomaticBackgroundTask />
+        <ForceUpdateFromAnyVersion>true</ForceUpdateFromAnyVersion>
     </UpdateSettings>
 </AppInstaller>
